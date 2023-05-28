@@ -1,40 +1,40 @@
 [gd_scene load_steps=10 format=3 uid="uid://medvp812sviv"]
 
-[ext_resource type="Script" path="res://test/scripts/main.gd" id="1_svbmq"]
-[ext_resource type="PackedScene" uid="uid://3gk86d65v0xm" path="res://test/scenes/terrain_map.tscn" id="2_hm0tf"]
-[ext_resource type="TileSet" uid="uid://dd4yhc7ie4xkg" path="res://test/resources/tile_set.tres" id="3_kuak8"]
-[ext_resource type="Script" path="res://scripts/tile_base.gd" id="4_0bdoy"]
-[ext_resource type="PackedScene" uid="uid://k7lesi0dky3d" path="res://test/scenes/player.tscn" id="5_6x77w"]
-[ext_resource type="Script" path="res://test/scripts/quit.gd" id="6_w8n8e"]
+[ext_resource type="Script" path="res://test/scripts/main.gd" id="1_6topv"]
+[ext_resource type="PackedScene" uid="uid://3gk86d65v0xm" path="res://test/scenes/terrain_map.tscn" id="2_d3b5v"]
+[ext_resource type="TileSet" uid="uid://dd4yhc7ie4xkg" path="res://test/resources/tile_set.tres" id="3_neq8w"]
+[ext_resource type="Script" path="res://scripts/tile_base.gd" id="4_vkn0a"]
+[ext_resource type="PackedScene" uid="uid://k7lesi0dky3d" path="res://test/scenes/player.tscn" id="5_6x8t3"]
+[ext_resource type="Script" path="res://test/scripts/quit.gd" id="6_ai201"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_phi8t"]
 frequency = 0.015
 
 [sub_resource type="Resource" id="Resource_jtdvf"]
-script = ExtResource("4_0bdoy")
+script = ExtResource("4_vkn0a")
 source_id = 0
 atlas_coords = Vector2i(0, 0)
 alternative_tile = 0
 
 [sub_resource type="Resource" id="Resource_j6a5a"]
-script = ExtResource("4_0bdoy")
+script = ExtResource("4_vkn0a")
 source_id = 0
 atlas_coords = Vector2i(1, 0)
 alternative_tile = 0
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_svbmq")
+script = ExtResource("1_6topv")
 
-[node name="TerrainMap" parent="." instance=ExtResource("2_hm0tf")]
-tile_set = ExtResource("3_kuak8")
+[node name="TerrainMap" parent="." instance=ExtResource("2_d3b5v")]
+tile_set = ExtResource("3_neq8w")
 _noise = SubResource("FastNoiseLite_phi8t")
 _grass_tile = SubResource("Resource_jtdvf")
 _water_tile = SubResource("Resource_j6a5a")
 
-[node name="Player" parent="." instance=ExtResource("5_6x77w")]
+[node name="Player" parent="." instance=ExtResource("5_6x8t3")]
 motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Node" type="Node" parent="."]
-script = ExtResource("6_w8n8e")
+script = ExtResource("6_ai201")
