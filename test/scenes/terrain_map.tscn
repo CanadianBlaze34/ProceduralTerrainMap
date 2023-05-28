@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://3gk86d65v0xm"]
 
-[ext_resource type="Script" path="res://scripts/terrain_map.gd" id="1_uka2o"]
+[ext_resource type="Script" path="res://scripts/terrain_map.gd" id="1_jxfr7"]
 
 [node name="TerrainMap" type="TileMap"]
 format = 2
-script = ExtResource("1_uka2o")
+script = ExtResource("1_jxfr7")

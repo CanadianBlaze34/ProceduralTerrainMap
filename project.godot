@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="TerrainMap"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://test/scenes/main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://images/icon.svg"
+config/icon="res://test/images/icon.svg"
 
 [display]
 
